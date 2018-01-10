@@ -1,6 +1,7 @@
 # @private
 class MarkovDictionary # :nodoc:
-  attr_reader :dictionary, :depth, :capitalized_words
+  attr_reader :depth, :capitalized_words
+  attr_accessor :dictionary
   def initialize(depth=2)
     @dictionary = {}
     @capitalized_words = []

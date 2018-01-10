@@ -4,12 +4,12 @@
 require_relative 'marky_markov/persistent_dictionary'
 require_relative 'marky_markov/markov_sentence_generator'
 
-# @version = 0.3.5
+# @version = 0.3.6
 # @author Matt Furden
 # Module containing TemporaryDictionary and Dictionary for creation of
 # Markov Chain Dictionaries and generating sentences from those dictionaries.
 module MarkyMarkov
-  VERSION = '0.3.5'
+  VERSION = '0.3.6'
 
   class TemporaryDictionary
     # Create a new Temporary Markov Chain Dictionary and sentence generator for use.
@@ -30,6 +30,11 @@ module MarkyMarkov
     # @return [Hash] the MarkovDictionary hash.
     def dictionary
       @dictionary.dictionary
+    end
+
+    # Sets the MarkovDictionary objects dictionary hash.
+    def dictionary=(hash)
+      @dictionary.dictionary = hash
     end
 
     # Parses a given file and adds the sentences it contains to the current dictionary.
